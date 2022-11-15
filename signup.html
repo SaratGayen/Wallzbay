@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallzbay-The.best.wallapers.of.the.earth</title>
     <link rel="stylesheet" href="css/signup.css">
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body> 
     <section>
@@ -15,21 +17,40 @@
      </div>
      <div class="cont">
         <h1>Create Account</h1>
+        <div class="media-options">
+            <a href="#" class="field google">
+                <img src="images/google.png" alt="" class="google-img">
+                <span>Login with Google</span>
+            </a>
+            <a href="#" class="field google">
+                <img src="images/google.png" alt="" class="google-img">
+                <span>Login with Facebook</span>
+            </a>
+        </div> 
 
         <span>-OR-</span>
-        <form>
+        <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
             <input type="text" placeholder="Full Name" name="fname">
+            <br>
+            <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" class="image" name="image" required>
             <br>
             <input type="email" placeholder="Email addres" name="email">
             <br>
             <input type="password" placeholder="Type your password" name="pass">
+            <i class="uil uil-eye-slash showHidePw"></i>
             <br>
-            <input type="submit" name="submit">
+            <div class="checkbox-text">
+                <div class="checkbox-content">
+                    <input type="checkbox" id="termCon" required>
+                    <label for="termCon" class="text">I accepted all terms and conditions</label>
+                </div>
+            </div>
+            <input type="submit" name="submit" id="button" value="Signup">
         </form>
         <p>Alreday  have aaccount?<a href="signin.html">Login</a> </p>
         
 
      </div>
-  
+     <script src="js/sh.js"></script>
 </body>
 </html>
