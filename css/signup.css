@@ -14,6 +14,16 @@ body{
     height: 100vh;
     width: 100vw;
 }
+input[type=text] {
+    border: none;
+    padding: 10px; 
+    background:none;
+    border-bottom: 2px solid rgb(124, 123, 123);
+}
+input[type=text]:focus{
+    background: none;
+    outline: none;
+}
 
 section{
     display: flex;
@@ -23,10 +33,10 @@ section{
 }
 .cont{
     position: relative;
-    background: #8C8C74;
     border-radius: 100px 0px 0px 100px;
     width: 55vw;
-    height: 80vh;
+    height: 100vh;
+    background: rgba(140, 140, 116, 0.5);
 }
 
 .img{
