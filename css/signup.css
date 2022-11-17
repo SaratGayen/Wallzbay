@@ -21,6 +21,23 @@ body{
     width: 57vw;
     height: 100vh;
 }
+
+.img{
+     width: 38%;
+    position: relative;
+    top: 10rem;
+    left: 3rem;
+}
 .items{
-    
+    position: relative;
+    height: 20rem;
+    width: 35rem;
+    margin: auto;
+    top: 2rem ;
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 400;
 }
