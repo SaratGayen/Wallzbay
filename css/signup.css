@@ -14,18 +14,25 @@ body{
     height: 100vh;
     width: 100vw;
 }
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
 .cont{
+    position: relative;
     background: #8C8C74;
     border-radius: 100px 0px 0px 100px;
-    float: right;
-    width: 57vw;
-    height: 100vh;
+    width: 55vw;
+    height: 80vh;
 }
 
 .img{
      width: 38%;
     position: relative;
-    top: 10rem;
+    /* top: 10rem; */
     left: 3rem;
 }
 .items{
