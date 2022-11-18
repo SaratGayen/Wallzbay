@@ -14,14 +14,24 @@ body{
     height: 100vh;
     width: 100vw;
 }
-input{
-    /* width: 50%; */
+input[type=submit]{
+    outline: none;
+    background: rgb(153, 153, 146);
+    width: 50%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+input[type=text],input[type=email],input[type=file],input[type=password]{
+    width: 50%;
     border: none;
     padding: 10px; 
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
 }
-input:focus{
+input[type=text],input[type=email],input[type=file],input[type=password]{
     background: none;
     outline: none;
 }
