@@ -15,11 +15,11 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 input[type=checkbox]{
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     cursor: pointer;
 
 }
@@ -31,7 +31,7 @@ input[type=submit]{
     border: none;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     cursor: pointer;
 
 }
@@ -41,20 +41,20 @@ input[type=text],input[type=email],input[type=file],input[type=password]{
     padding: 10px; 
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
-    margin-bottom:25px ;
+    margin-bottom:20px ;
     cursor: pointer;
 }
 input[type=text],input[type=email],input[type=file],input[type=password]{
     background: none;
     outline: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
 section{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
 }
 .cont{
@@ -68,7 +68,11 @@ section{
 .img{
      width: 38%;
     position: relative;
-    left: 3rem;
+    top: 6rem;
+}
+img{
+    filter: invert(1);
+    width : 470px;
 }
 .items{
     position: relative;
