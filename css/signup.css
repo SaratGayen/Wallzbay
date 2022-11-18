@@ -54,7 +54,7 @@ input[type=text],input[type=email],input[type=file],input[type=password]{
 section{
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     height: 100vh;
 }
 .cont{
@@ -63,16 +63,18 @@ section{
     width: 55vw;
     height: 100vh;
     background: rgba(140, 140, 116, 0.5);
+    backdrop-filter: blur(3px);
 }
 
 .img{
      width: 38%;
     position: relative;
-    top: 6rem;
+    margin-bottom: 20%;
+
 }
 img{
     filter: invert(1);
-    width : 470px;
+    width : 550px;
 }
 .items{
     position: relative;
