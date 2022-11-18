@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
     
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 body{
     background-image:url("../img/bg2.jpg");
     background-size: cover;
@@ -16,6 +20,7 @@ body{
 }
 input[type=checkbox]{
     margin-bottom: 25px;
+    cursor: pointer;
 
 }
 input[type=submit]{
@@ -27,6 +32,7 @@ input[type=submit]{
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 30px;
+    cursor: pointer;
 
 }
 input[type=text],input[type=email],input[type=file],input[type=password]{
@@ -36,11 +42,13 @@ input[type=text],input[type=email],input[type=file],input[type=password]{
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
     margin-bottom:25px ;
+    cursor: pointer;
 }
 input[type=text],input[type=email],input[type=file],input[type=password]{
     background: none;
     outline: none;
     margin-bottom: 25px;
+    cursor: pointer;
 }
 
 section{
@@ -91,9 +99,20 @@ a{
     margin:20px;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .media-options {
     justify-content: space-evenly;
     display:flex;
 }
+.uil.uil-eye.showHidePw {
+    cursor: pointer;
+    position: relative;
+    left: -3%;
+  }
+.uil.uil-eye-slash.showHidePw {
+    cursor: pointer;
+    position: relative;
+    right: 17px;
+  }
