@@ -55,3 +55,13 @@ h1{
     position: relative;
     right: 5%;
   }
+  .uil.uil-eye.showHidePw {
+    cursor: pointer;
+    position: relative;
+    left: -3%;
+  }
+.uil.uil-eye-slash.showHidePw {
+    cursor: pointer;
+    position: relative;
+    right: 17px;
+  }
