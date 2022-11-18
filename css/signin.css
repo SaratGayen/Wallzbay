@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
     
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 body{
     background-image:url("../img/bg2.jpg");
     background-size: cover;
@@ -14,15 +18,34 @@ body{
     height: 100vh;
     width: 100vw;
 }
-input {
+input[type=checkbox]{
+    margin-bottom: 25px;
+    cursor: pointer;
+
+}
+input[type=submit]{
+    outline: none;
+    background: rgb(153, 153, 146);
+    width: 50%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+}
+input[type=email],input[type=password]{
     border: none;
     padding: 10px; 
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
 }
-input:focus{
+input[type=email],input[type=password]{
     background: none;
     outline: none;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 section{
     display: flex;
@@ -54,4 +77,26 @@ h1{
 .img {
     position: relative;
     right: 5%;
+  }
+  a{  
+    text-decoration: none;
+    padding: 15px;
+    background-color: rgb(153, 153, 146);
+    border-radius: 5px;
+    border: 2px solid black;
+    color: black;
+    margin:20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+  .uil.uil-eye.showHidePw {
+    cursor: pointer;
+    position: relative;
+    left: -3%;
+  }
+.uil.uil-eye-slash.showHidePw {
+    cursor: pointer;
+    position: relative;
+    right: 17px;
   }

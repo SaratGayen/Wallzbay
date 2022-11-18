@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
     
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 body{
     background-image:url("../img/bg2.jpg");
     background-size: cover;
@@ -14,16 +18,37 @@ body{
     height: 100vh;
     width: 100vw;
 }
-input{
-    /* width: 50%; */
+input[type=checkbox]{
+    margin-bottom: 25px;
+    cursor: pointer;
+
+}
+input[type=submit]{
+    outline: none;
+    background: rgb(153, 153, 146);
+    width: 50%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+}
+input[type=text],input[type=email],input[type=file],input[type=password]{
+    width: 50%;
     border: none;
     padding: 10px; 
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
+    margin-bottom:25px ;
+    cursor: pointer;
 }
-input:focus{
+input[type=text],input[type=email],input[type=file],input[type=password]{
     background: none;
     outline: none;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 
 section{
@@ -66,15 +91,28 @@ h1{
 
 a{  
     text-decoration: none;
-    padding: 10px;
+    padding: 15px;
     background-color: rgb(153, 153, 146);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid black;
     color: black;
     margin:20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .media-options {
     justify-content: space-evenly;
     display:flex;
 }
+.uil.uil-eye.showHidePw {
+    cursor: pointer;
+    position: relative;
+    left: -3%;
+  }
+.uil.uil-eye-slash.showHidePw {
+    cursor: pointer;
+    position: relative;
+    right: 17px;
+  }
