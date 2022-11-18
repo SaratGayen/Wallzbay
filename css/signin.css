@@ -34,7 +34,7 @@ input[type=submit]{
     cursor: pointer;
 
 }
-input[type=email],input[type=password]{
+input[type=email],input[type=password],input[type=text]{
     border: none;
     padding: 10px; 
     background:none;
