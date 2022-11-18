@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
     
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 body{
     background-image:url("../img/bg2.jpg");
     background-size: cover;
