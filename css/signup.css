@@ -15,7 +15,7 @@ body{
     width: 100vw;
 }
 input{
-    width: 50%;
+    /* width: 50%; */
     border: none;
     padding: 10px; 
     background:none;
@@ -68,8 +68,13 @@ a{
     text-decoration: none;
     padding: 10px;
     background-color: rgb(153, 153, 146);
-    border-radius: 10%;
+    border-radius: 10px;
     border: 2px solid black;
     color: black;
-    margin:10px;
+    margin:20px;
+}
+
+.media-options {
+    justify-content: space-evenly;
+    display:flex;
 }
