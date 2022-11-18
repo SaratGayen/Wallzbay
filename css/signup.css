@@ -14,6 +14,10 @@ body{
     height: 100vh;
     width: 100vw;
 }
+input[type=checkbox]{
+    margin-bottom: 25px;
+
+}
 input[type=submit]{
     outline: none;
     background: rgb(153, 153, 146);
@@ -22,6 +26,7 @@ input[type=submit]{
     border: none;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 30px;
 
 }
 input[type=text],input[type=email],input[type=file],input[type=password]{
@@ -30,10 +35,12 @@ input[type=text],input[type=email],input[type=file],input[type=password]{
     padding: 10px; 
     background:none;
     border-bottom: 2px solid rgb(124, 123, 123);
+    margin-bottom:25px ;
 }
 input[type=text],input[type=email],input[type=file],input[type=password]{
     background: none;
     outline: none;
+    margin-bottom: 25px;
 }
 
 section{
