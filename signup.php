@@ -39,7 +39,7 @@
                             if(move_uploaded_file($tmp_name,"pfimg/".$new_img_name)){
                               
         //   inserting records
-          $insertquery = "insert into users (username,email,password,img) values ('$username','$email','$pass','$new_img_name')";
+          $insertquery = "insert into user (name,email,pfimg,password) values ('$username','$email','$new_img_name','$pass')";
 
 
         // connection alerts
