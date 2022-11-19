@@ -5,6 +5,7 @@
           $username = mysqli_real_escape_string($con, $_POST['username']);
           $email = mysqli_real_escape_string($con, $_POST['email']);
           $password = mysqli_real_escape_string($con, $_POST['password']);
+          $ran_id = rand(time(), 100000000);
           if(isset($_FILES['image']))
           
           // servercite empty validation
@@ -39,7 +40,7 @@
                             if(move_uploaded_file($tmp_name,"pfimg/".$new_img_name)){
                               
         //   inserting records
-          $insertquery = "insert into user (name,email,pfimg,password) values ('$username','$email','$new_img_name','$pass')";
+          $insertquery = "insert into users (username,email,img,password) values ('$username','$email','$new_img_name','$pass')";
 
 
         // connection alerts
