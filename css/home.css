@@ -64,7 +64,13 @@ a{
   padding: 8px 20px;
   border: none;
 }
+footer{
+  background: rgb(56, 56, 56);
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+}
 p{
+  color: beige;
   font-size: 1.3rem;
 }
 .uil-facebook{
