@@ -37,9 +37,10 @@ nav{
     position: relative;
     border: none;
     border-bottom: 2px solid rgb(124, 123, 123);
-    /* transition: width 0.4s ease-in-out; */
     right: 10%;
     padding: none;
+    background: none;
+    outline: none;
   }
 a{
   padding:10px;
