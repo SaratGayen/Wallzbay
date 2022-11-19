@@ -64,3 +64,14 @@ a{
   padding: 8px 20px;
   border: none;
 }
+p{
+  font-size: 1.3rem;
+}
+.uil-facebook{
+  color: #1A59A5;
+  font-size: 2rem;
+}
+.uil-twitter{
+  color: #1BADD8;
+  font-size: 2rem;
+}
