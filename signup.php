@@ -1,3 +1,67 @@
+<?php
+          session_start();
+          include_once "php/connection.php";
+          if(isset($_POST['submit'])){
+          $username = mysqli_real_escape_string($con, $_POST['username']);
+          $email = mysqli_real_escape_string($con, $_POST['email']);
+          $password = mysqli_real_escape_string($con, $_POST['password']);
+          if(isset($_FILES['image']))
+          
+          // servercite empty validation
+          if($username != "" && $email !="" && $password !="" && $_FILES !=""){
+
+          
+        //   password encryption
+          $pass=password_hash($password,PASSWORD_BCRYPT);
+          
+        //   email chechking
+          $emailquery = "select * from users where email='$email'";
+          $query=mysqli_query($con,$emailquery);
+          $emailcount = mysqli_num_rows($query);
+          if($emailcount>0){
+          echo "email already exist";
+          } 
+          // image
+          else{
+                    $img_name = $_FILES['image']['name'];
+                    $img_type = $_FILES['image']['type'];
+                    $tmp_name = $_FILES['image']['tmp_name'];
+                    
+                    $img_explode = explode('.',$img_name);
+                    $img_ext = end($img_explode);
+    
+                    $extensions = ["jpeg", "png", "jpg"];
+                    if(in_array($img_ext, $extensions) === true){
+                        $types = ["image/jpeg", "image/jpg", "image/png"];
+                        if(in_array($img_type, $types) === true){
+                            $time = time();
+                            $new_img_name = $time.$img_name;
+                            if(move_uploaded_file($tmp_name,"userpfpic/".$new_img_name)){
+                              
+        //   inserting records
+          $insertquery = "insert into users (uniqueid,username,email,password,img) values ('$username','$email','$pass','$new_img_name')";
+
+
+        // connection alerts
+          $iquery = mysqli_query($con,$insertquery);
+          if($iquery){
+            ?>
+            <script>
+              alert("Connection Successful");
+            </script>
+            <?php
+          }else{
+            ?>
+            <script>
+              alert("Connection not Succeful");
+            </script>
+            <?php
+          }
+       }
+      }}}}
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +83,7 @@
      <div class="cont">
         <div class="items">
         <h1>Create Account</h1>
+        <!-- direct login via google & facebook -->
         <div class="media-options">
             <a href="#" class="field google">
                 <i class="uil uil-google"></i>

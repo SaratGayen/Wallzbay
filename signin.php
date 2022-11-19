@@ -1,3 +1,62 @@
+<?php
+         session_start();
+          include_once "php/connection.php";
+          if(isset($_POST['submit'])){
+          $email=$_POST['email'];
+          $password=$_POST['password'];
+
+        // checking email
+          $email_search= "select * from users where email='$email'";
+          $query = mysqli_query($con,$email_search);
+          $email_count =  mysqli_num_rows($query);
+
+          if($email_count){
+          $email_pass = mysqli_fetch_assoc($query);
+        
+        // checking password
+
+          $db_pass = $email_pass['password'];
+
+        //   name storing in seesion
+          $_SESSION['username'] = $email_pass['username'];
+
+
+          $pass_decode = password_verify($password,$db_pass);
+
+        //  log in after matching password
+
+           if($pass_decode){
+
+            if(isset($_POST['rememberme'])){
+                setcookie('emailcookie',$email,time()+86400);
+                setcookie('passwordcookie',$password,time()+86400);
+                header('location:user.php');
+            }
+
+
+           echo "login successfull";
+      
+         // Redirecting to chat screen using script
+
+          ?>
+           <script>
+           location.replace("user.php");
+          </script>
+          <?php
+        }
+
+       
+       else{
+           echo "Password Incorrect";
+          }
+
+        }else{ 
+          echo "Incorrect Email";
+          }
+    
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
