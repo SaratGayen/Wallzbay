@@ -40,7 +40,7 @@
 
           ?>
            <script>
-           location.replace("home.php");
+           location.replace("home.html");
           </script>
           <?php
         }
