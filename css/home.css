@@ -7,14 +7,29 @@
     
 }
 nav{
+  position: relative;
+   /* background-image:url("../img/h.jpg");*/
+    width: 100vw;
+    height: 13.5vh;
+    /*background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    display: inline-block;
+
+  
+}
+/* after ading bg div*/
+
+.bg{
+   position: absolute;
     background-image:url("../img/h.jpg");
     width: 100vw;
     height: 13.5vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: inline-block;
-  
+    opacity: 0.5;
+    
 }
 .logo{
     float: left;
@@ -23,30 +38,37 @@ nav{
     left: 5%;
 }
 .details{
-  top: 1.9vh;
-    display: flex;
+  top: 1.5em;
     float: right;
     position: relative;
-    /* top: 35%; */
-    right: 5%;
-    justify-content: space-evenly;
+
+}
+
+/*targeting search icon to move position*/
+.uil-search{
+  position: relative;
+  font-size: 1.5em;
+  right:4%;
 }
 #gsearch{
-    /* width: 65%; */
     box-sizing: border-box;
     position: relative;
     border: none;
     border-bottom: 2px solid rgb(124, 123, 123);
-    right: 10%;
+    right: 3%;
     padding: none;
     background: none;
     outline: none;
+    font-size: 1.2em;
+    width: 50%;
   }
 a{
-  padding:10px;
+  padding:8px 10px;
   border-radius: 10%;
   border: none;
   background: #D9D9D9;
+  text-decoration:none;
+  color: black;
 }
 .filter{
   text-align: center;
