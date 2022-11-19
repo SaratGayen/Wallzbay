@@ -36,10 +36,10 @@
                         if(in_array($img_type, $types) === true){
                             $time = time();
                             $new_img_name = $time.$img_name;
-                            if(move_uploaded_file($tmp_name,"userpfpic/".$new_img_name)){
+                            if(move_uploaded_file($tmp_name,"pfimg/".$new_img_name)){
                               
         //   inserting records
-          $insertquery = "insert into users (uniqueid,username,email,password,img) values ('$username','$email','$pass','$new_img_name')";
+          $insertquery = "insert into users (username,email,password,img) values ('$username','$email','$pass','$new_img_name')";
 
 
         // connection alerts
@@ -98,10 +98,10 @@
         <span>-OR-</span>
         <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
             <i class="uil uil-user"></i>
-            <input type="text" placeholder="Full Name" name="fname" required>
+            <input type="text" placeholder="Full Name" name="username" required>
             <br>
             <i class="uil uil-image-upload"></i>
-            <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" class="image" name="image" required>
+            <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" class="image" name="image" >
             <br>
             <i class="uil uil-envelope-alt"></i>
             <input type="email" placeholder="Email addres" name="email" required>
