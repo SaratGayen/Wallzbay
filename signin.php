@@ -40,7 +40,7 @@
 
           ?>
            <script>
-           location.replace("user.php");
+           location.replace("home.php");
           </script>
           <?php
         }
@@ -95,7 +95,7 @@
             </div>
             <input type="submit" name="submit" id="button" value="Signin">
         </form>
-        <a href="signup.html">Create a new account?</a> 
+        <a href="signup.php">Create a new account?</a> 
     </div>  
 
      </div>
