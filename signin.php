@@ -18,20 +18,11 @@
           $db_pass = $email_pass['password'];
 
         //   name storing in seesion
-          $_SESSION['username'] = $email_pass['username'];
-
-
           $pass_decode = password_verify($password,$db_pass);
 
         //  log in after matching password
 
            if($pass_decode){
-
-            if(isset($_POST['rememberme'])){
-                setcookie('emailcookie',$email,time()+86400);
-                setcookie('passwordcookie',$password,time()+86400);
-                header('location:user.php');
-            }
 
 
            echo "login successfull";
@@ -79,21 +70,21 @@
      <div class="cont">
         <div class="items">
         <h1>Log in</h1>
-        <form>
+        <form action="#"  method="POST" autocomplete="off">
             <i class="uil uil-envelope-alt"></i>
-            <input type="email" placeholder="Email addres" name="email">
+            <input type="email" placeholder="Email addres" name="email" required>
             <br>
             <i class="uil uil-lock"></i>
-            <input type="password" placeholder="Type your password" name="password" class="password" required>
+            <input type="password" placeholder="Type your password" name="password" class="password"  required>
             <i class="uil uil-eye-slash showHidePw"></i>
             <br>
-            <div class="checkbox-text">
+            <!-- <div class="checkbox-text">
                 <div class="checkbox-content">
                     <input type="checkbox" id="termCon" required>
                     <label for="termCon" class="text">remembar me</label>
                 </div>
-            </div>
-            <input type="submit" name="submit" id="button" value="Signin">
+            </div> -->
+            <input type="submit" name="submit" id="submit" value="Signin">
         </form>
         <a href="signup.php">Create a new account?</a> 
     </div>  
